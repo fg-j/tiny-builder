@@ -16,4 +16,4 @@ jobs:
           config-name: release-drafter.yml # located in .github/ in default branch
           publish: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.FRANKIE_PAT }}
