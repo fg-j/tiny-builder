@@ -74,7 +74,7 @@ jobs:
     - name: Update Release Notes
       if: ${{ steps.compare_previous_release.outputs.builder_changes == 'true' }}
       run: |
-        payload="'{\"body\" : \"```\n${RELEASE_BODY}\n```\"}'"
+        payload="'{\"body\" : \"\`\`\`\n${RELEASE_BODY}\n\`\`\`\"}'"
 
         curl \
           -X PATCH \
@@ -83,5 +83,5 @@ jobs:
           "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${RELEASE_ID}" \
           -d "${payload}"
       env:
-        RELEASE_ID: ${{ steps.publishh.outputs.id }}
-        RELEASE_BODY: ${{ needs.smoke.outputs.release_notes }}
+        RELEASE_ID: ${{ steps.publish.outputs.id }}
+        RELEASE_BODY: ${{ needs.smoke.outputs.body }}
