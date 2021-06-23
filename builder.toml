@@ -2,6 +2,16 @@ description = "Tiny base image (bionic build image, distroless-like run image) w
 
 
 
+
+
+
+
+
+
+
+
+
+
 [[buildpacks]]
   uri = "docker://gcr.io/paketo-buildpacks/go:0.6.0"
   version = "0.6.0"

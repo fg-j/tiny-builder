@@ -35,6 +35,8 @@ jobs:
 
     # - name: Run Smoke Tests
     #   run: ./scripts/smoke.sh --name builder
+    - name: Create builder
+      run: pack builder create builder --config ./builder.toml
     - name: Generate Release Notes
       id: notes
       run: |
