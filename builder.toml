@@ -1,5 +1,7 @@
 description = "Tiny base image (bionic build image, distroless-like run image) with buildpacks for Java Native Image and Go"
 
+
+
 [[buildpacks]]
   uri = "docker://gcr.io/paketo-buildpacks/go:0.6.0"
   version = "0.6.0"
