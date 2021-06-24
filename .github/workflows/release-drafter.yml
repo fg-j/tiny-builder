@@ -79,7 +79,7 @@ jobs:
     - name: Update Release Notes
       if: ${{ steps.compare_previous_release.outputs.builder_changes == 'true' }}
       run: |
-        payload="{\"body\" : \"\`\`\`\n"${notes}"\n\`\`\`\"}"
+        payload="{\"body\" : \"\`\`\`\n"${RELEASE_BODY}"\n\`\`\`\"}"
 
         curl \
           -X PATCH \
